@@ -15,7 +15,7 @@ class Runner {
 		Duck[] ducks = new Duck[] { new MallardDuck()
 									, new RedHeadDuck()
 									, new RubberDuck()
-									//, new DecoyDuck()		// ADD: DecoyDuck
+									, new DecoyDuck()		// ADD: DecoyDuck
 									};						// but it quacks (as it inherits from Duck)
 		System.out.println();								// How to fix that?
 		
@@ -29,16 +29,14 @@ class Runner {
 
 			System.out.print("\t, then it swims like this: ");
 				d.swim();				
-			if( ) // WRITE CODE: "if d is an instance of a Quackable - i.e. implements quack()
-			{
+			if(d instanceof Quackable) { // WRITE CODE: "if d is an instance of a Quackable - i.e. implements quack()
 				System.out.print("\t, and makes a ");
-				d.quack();		// then it can be asked to quack()
+				((Quackable)d).quack(); // then it can be asked to quack()
 			}		
 			
-			if( ) // WRITE CODE: "if d is an instance of a Flyable - i.e. implements fly()
-			{
+			if(d instanceof Flyable) { // WRITE CODE: "if d is an instance of a Flyable - i.e. implements fly()
 				System.out.print("\t, and flys off: ");
-					((Flyable)d).fly();	// then it can be asked to fly()
+				((Flyable)d).fly();	// then it can be asked to fly()
 			}
 			System.out.println("\n");
 		}
