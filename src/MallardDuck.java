@@ -8,7 +8,11 @@ class MallardDuck extends Duck implements Flyable, Quackable {
 
 	@Override
 	public void fly() {
-		System.out.println("<<" + this.getClass().getName() + " fly style>>");
+		//System.out.println("<<" + this.getClass().getName() + " fly style>>");
+		// Adding a change to the fly() method, now it should print
+		// the "wheesh" sound effect, which implies changing each of the
+		// fly() method implementations manually.
+		System.out.println("<<" + this.getClass().getName() + " wheesh>>");
 	}
 
 	@Override
